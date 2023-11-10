@@ -1,0 +1,70 @@
+@use 'variaveis';
+@use 'hero';
+@use 'header';
+@use 'sinopse';
+@use 'personagens';
+@use 'trailer';
+@use 'descricao';
+@use 'footer';
+
+@font-face {
+    font-family: 'Century Gothic';
+    src: url(../../assets/fonts/GOTHIC.TTF);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Century Gothic';
+    src: url(../../assets/fonts/GOTHICB.TTF);
+    font-weight: 700;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Century Gothic', sans-serif;
+    list-style: none;
+}
+
+body {
+    background-color: variaveis.$corPrincipal;
+    color: variaveis.$corSecundaria;
+}
+
+.title {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 20px;
+    margin: 20px 0;
+    text-align: center;
+
+    @media (max-width: 768px) {
+        font-size: 20px;
+    }
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 8px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: variaveis.$corPrincipal;
+    background-color: variaveis.$corSecundaria;
+    cursor: pointer;
+
+    @media (max-width: 768px) {
+        font-size: 18px;
+    }
+
+    &:hover {
+        background-color: lighten(variaveis.$corSecundaria, 5%);
+    }
+}

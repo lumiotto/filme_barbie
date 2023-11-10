@@ -1,0 +1,36 @@
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    z-index: 1;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 36px;
+
+        @media (max-width: 768px) {
+            margin: 0 16px;
+        }
+    }
+
+    &__logo {
+        max-width: 120px;
+        width: 100%;
+        margin-top: 6px;
+
+        &--is-hidden {
+            visibility: hidden;
+        }
+    }
+
+    &__links {
+        display: flex;
+
+        &__item {
+            margin: 8px;
+        }
+    }
+}

@@ -1,0 +1,54 @@
+.personagens {
+    margin-top: 30px;
+    margin-bottom: 60px;
+
+    h2 {
+        padding: 50px 0;
+    }
+
+    @media (max-width: 1024px) {
+        margin: 80px 0;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 320px);
+        gap: 25px;
+        justify-content: center;
+
+
+        @media (max-width: 768px) {
+            grid-template-columns: repeat(2, 40%);
+            gap: 10px;
+            margin-top: 50px;
+        }
+
+        @media (min-width: 768px) and (max-width:1024px) {
+            grid-template-columns: repeat(3, 30%);
+            gap: 20px;
+            margin-top: 50px;
+        }
+
+        &__item {
+            height: 400px;
+
+            @media (max-width: 768px) {
+                height: 380px;
+                justify-content: center;
+
+                &:last-of-type {
+                    display: none;
+                }
+            }
+
+            &:hover {
+                transform: scale(1.1);
+                
+                @media (max-width: 1024px) {
+                    transform: none;
+                }
+            } 
+        }
+    }
+
+}
